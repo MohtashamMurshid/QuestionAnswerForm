@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyPage.createNewSurveyController">
+   <children>
+      <Circle fill="#1f93ff00" layoutY="51.0" radius="35.0" stroke="#00ff7e" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="-21.0" layoutY="341.0" radius="109.0" stroke="RED" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="586.0" layoutY="366.0" radius="35.0" stroke="#ffa100" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="631.0" layoutY="10.0" radius="109.0" stroke="#2600ff" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="51.0" layoutX="-1.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="792.0" />
+      <Label layoutX="14.0" layoutY="5.0" text="Create new Survey">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="51.0" prefHeight="280.0" prefWidth="567.0" spacing="10.0">
+         <children>
+            <Label text="Survey Title">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surveyTitleTextfield" prefHeight="25.0" prefWidth="473.0" promptText="Survey Title" />
+            <Label text="Survey Description">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="surveyDescriptionTextArea" prefHeight="168.0" prefWidth="473.0" promptText="Survey Description" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="321.0" layoutY="341.0" prefHeight="25.0" prefWidth="267.0" spacing="10.0">
+         <children>
+            <Button fx:id="returnButton" mnemonicParsing="false" onAction="#returnToPrev" text="Return" />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearAllFields" text="Clear" />
+            <Button fx:id="createSurveyButton" mnemonicParsing="false" onAction="#createNewSurvey" text="Create New Survey" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" layoutX="14.0" layoutY="341.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comments.addCommentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="95.0" layoutX="-31.0" layoutY="-35.0" stroke="BLACK" strokeType="INSIDE" width="622.0" />
+      <TextField fx:id="commentTextArea" alignment="TOP_LEFT" layoutX="33.0" layoutY="66.0" prefHeight="293.0" prefWidth="381.0" />
+      <Label layoutX="35.0" layoutY="25.0" style="-fx-font-weight: bold;" text="Add Comment:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_RIGHT" layoutX="35.0" layoutY="376.0" prefHeight="27.0" prefWidth="381.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+            <Button fx:id="discardButton" mnemonicParsing="false" onAction="#discardComment" text="Discard Comment" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addComment" text="Add Comment" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" layoutX="35.0" layoutY="403.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

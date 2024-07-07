@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyPage.confirmCreatedSurveyPageController">
+   <children>
+      <Circle fill="#1f93ff00" layoutX="10.0" layoutY="61.0" radius="35.0" stroke="#00ff7e" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="-11.0" layoutY="351.0" radius="109.0" stroke="RED" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="596.0" layoutY="376.0" radius="35.0" stroke="#ffa100" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="641.0" layoutY="20.0" radius="109.0" stroke="#2600ff" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="65.0" layoutX="-132.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="864.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Confirm?">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="24.0" layoutY="61.0" prefHeight="280.0" prefWidth="567.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="567.0" spacing="10.0">
+               <children>
+                  <Label text="Survey Id: ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="surveyIdTextField" editable="false" prefHeight="25.0" prefWidth="460.0" promptText="Survey ID" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="567.0" spacing="10.0">
+               <children>
+                  <Label text="Survey Title:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="surveyTitleTextField" editable="false" prefHeight="25.0" prefWidth="443.0" promptText="Survey Title" />
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="567.0">
+               <children>
+                  <Label text="Survey Description:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="surveyDescriptionTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Survey Description" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="275.0" layoutY="345.0" prefHeight="49.0" prefWidth="311.0" spacing="10.0">
+         <children>
+            <Button fx:id="discardButton" mnemonicParsing="false" onAction="#discardSurvey" text="Discard" />
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmNewSurvey" text="Confirm" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

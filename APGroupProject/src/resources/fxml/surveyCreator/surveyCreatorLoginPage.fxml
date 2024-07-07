@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyCreatorPage.surveyCreatorLoginPageController">
+   <children>
+      <Circle fill="#1f93ff00" layoutX="221.0" layoutY="279.0" radius="35.0" stroke="#00ff7e" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="-31.0" layoutY="279.0" radius="109.0" stroke="RED" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="724.0" layoutY="278.0" radius="35.0" stroke="#ffa100" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="743.0" radius="109.0" stroke="#2600ff" strokeType="INSIDE" />
+      <Label fx:id="errorLabel" layoutX="10.0" layoutY="179.0" prefHeight="39.0" prefWidth="701.0" style="-fx-font-weight: bold;" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_RIGHT" layoutX="94.0" layoutY="223.0" prefHeight="39.0" prefWidth="630.0" spacing="30.0">
+         <children>
+            <Button fx:id="surveyCreatorLoginButton" mnemonicParsing="false" onAction="#surveyCreatorPage" prefHeight="41.0" prefWidth="105.0" text="Log In">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="returnButton" mnemonicParsing="false" onAction="#returnToPrev" prefHeight="39.0" prefWidth="90.0" text="Return">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" prefHeight="41.0" prefWidth="72.0" text="Exit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#registerPage" prefHeight="39.0" prefWidth="199.0" text="Create New Account">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="186.0" layoutX="-202.0" layoutY="-107.0" stroke="BLACK" strokeType="INSIDE" width="1046.0" />
+      <Label layoutX="14.0" layoutY="24.0" style="-fx-font-weight: bold;" text="Survey Creator Login Page">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="10.0" layoutY="87.0" prefHeight="92.0" prefWidth="701.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="574.0" spacing="10.0">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Username:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="scUsernameTextField" prefHeight="25.0" prefWidth="580.0" promptText="Survey Creator Username" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="574.0" spacing="10.0">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Password:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="scPasswordTextField" prefHeight="25.0" prefWidth="588.0" promptText="Survey Creator Password" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyPage.guestViewSurveyController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="51.0" layoutX="-72.0" stroke="BLACK" strokeType="INSIDE" width="792.0" />
+      <Label layoutX="14.0" layoutY="8.0" text="Please Enter Survey Code">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="surveyCodeTextField" alignment="CENTER" layoutX="108.0" layoutY="149.0" prefHeight="79.0" prefWidth="384.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </TextField>
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="348.0" prefHeight="25.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="viewButton" mnemonicParsing="false" onAction="#viewSurvey" text="View Survey" />
+            <Button fx:id="returnButton" mnemonicParsing="false" onAction="#returnToPrev" text="Return" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" layoutX="27.0" layoutY="276.0" prefHeight="35.0" prefWidth="543.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

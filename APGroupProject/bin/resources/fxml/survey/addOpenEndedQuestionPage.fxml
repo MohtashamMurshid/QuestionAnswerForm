@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyPage.addOpenEndedQuestionController">
+   <children>
+      <Circle fill="#1f93ff00" layoutX="-47.0" layoutY="14.0" radius="109.0" stroke="RED" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="6.0" layoutY="432.0" radius="35.0" stroke="#00ff7e" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="827.0" layoutY="173.0" radius="109.0" stroke="#2600ff" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="367.0" layoutX="582.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="233.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b0bc" height="65.0" layoutX="-122.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1039.0" />
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="200.0" spacing="4.0">
+         <children>
+            <Label text="Question">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="questionLabel">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="14.0" layoutY="70.0" prefHeight="272.0" prefWidth="564.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="553.0" spacing="10.0">
+               <children>
+                  <Label text="Question">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="questionTextField" prefHeight="25.0" prefWidth="451.0" promptText="Add Question Here" />
+               </children>
+            </HBox>
+            <TextArea disable="true" prefHeight="212.0" prefWidth="564.0" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="18.0" layoutY="342.0" prefHeight="35.0" prefWidth="564.0" spacing="10.0">
+         <children>
+            <Button fx:id="discardButton" mnemonicParsing="false" onAction="#returnToPrev" text="Discard Question" />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearAllFields" text="Clear" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addQuestion" text="Add Question" />
+            <Button fx:id="completeButton" mnemonicParsing="false" onAction="#completeSurvey" text="Complete Survey" />
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="582.0" layoutY="70.0" prefHeight="187.0" prefWidth="226.0" spacing="20.0">
+         <children>
+            <Label text="Question Types">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="mcqButton" mnemonicParsing="false" onAction="#changeToMCQ" text="Multiple Choice Question" />
+            <Button fx:id="openEndedButton" disable="true" mnemonicParsing="false" text="Open Ended Question" />
+            <Button fx:id="trueFalseButton" mnemonicParsing="false" onAction="#changeToTrueFalse" text="True/False Question" />
+         </children>
+      </VBox>
+      <Label fx:id="errorLabel" layoutX="18.0" layoutY="387.0" prefHeight="35.0" prefWidth="552.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Circle fill="#1f93ff00" layoutX="664.0" layoutY="352.0" radius="35.0" stroke="#ffa100" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
